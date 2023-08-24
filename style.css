@@ -1,0 +1,243 @@
+:root {
+  --primary-color: #2d1e1e;
+  --secondary-color: rgb(3, 203, 203);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  font-family: sans-serif;
+}
+
+nav {
+  padding: 10px 10% !important;
+  background: transparent;
+}
+nav .nav-link {
+  margin-left: 20px !important;
+  transition: 0.3s all;
+  color: white;
+}
+.active {
+  color: var(--secondary-color) !important;
+}
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+.logo {
+  position: relative;
+  width: fit-content;
+}
+.logo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  animation: slideAnimation 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Home Start */
+
+.home {
+  background-image: url("./img/Untitled\ design.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 0px 10%;
+  align-items: center;
+  position: relative;
+}
+.home-content {
+  width: 50%;
+  padding-top: 30px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.title::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  animation: slideAnimation 2s ease forwards;
+  animation-delay: 0.4s;
+}
+.subtitle {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.subtitle::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  animation: slideAnimation 3s ease forwards;
+  animation-delay: 0.4s;
+}
+.about {
+  font-size: 16px;
+}
+.btn {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  padding: 0px !important;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  animation: slideAnimation 4s ease forwards;
+  animation-delay: 0.4s;
+}
+.btn a {
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary-color);
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  color: black;
+  transition: 0.4s all ease-out;
+}
+.btn .talk-btn {
+  background: transparent;
+  color: var(--secondary-color);
+  position: relative;
+  z-index: 1;
+}
+.btn .talk-btn:hover {
+  color: black;
+}
+.btn .talk-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn .talk-btn:hover::before {
+  content: "";
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
+.btn .hire-btn {
+  background: var(--secondary-color);
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+.btn .hire-btn:hover {
+  color: var(--secondary-color);
+}
+.btn .hire-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn .hire-btn:hover::before {
+  content: "";
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+.social-icon {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+.social-icon a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.social-icon a:hover {
+  color: black;
+}
+.social-icon a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: transparent;
+  transition: 0.4s;
+  z-index: -1;
+}
+.social-icon a:hover::before {
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.image-hover {
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  right: 0px;
+  height: 80%;
+  transition: 0.8s all;
+}
+.image-hover:hover {
+  background-color: var(--primary-color);
+  opacity: 0.4;
+}
+
+@keyframes slideAnimation {
+  100% {
+    width: 0%;
+  }
+}
+
+/* Home End */
